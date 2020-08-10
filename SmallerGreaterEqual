@@ -1,0 +1,45 @@
+import java.util.*;
+import java.io.*;
+
+public class Main {
+  public static void main(String args[]) throws IOException {
+    
+    //write your code here
+    //read N'
+    //read K
+    Scanner scan = new Scanner(System.in);
+    int t = scan.nextInt();
+    while(t-->0)
+    {
+    int n = scan.nextInt();
+    int[] array = new int[n];
+    //complete the function in main() itself
+    
+    int k = scan.nextInt();
+    //read the array
+    for(int i=0;i<n;i++)
+    {
+      array[i] = scan.nextInt();
+    }
+    int countGreater = 0;
+    int countEqual = 0;
+    int countLesser = 0;
+    for(int i=0;i<array.length;i++)
+    {
+      if(array[i] == k)
+      {
+        countEqual++;
+      }
+      else if(array[i]>k)
+      {
+        countGreater++;
+      }
+      else
+      {
+        countLesser++;
+      }
+    }
+    System.out.print(countLesser+" "+countGreater+" "+countEqual);
+    System.out.println();
+  }}
+}
