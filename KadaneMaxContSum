@@ -1,0 +1,9 @@
+ int currSum = arr[0];
+    int maxSum = arr[0];
+    
+    for(int i=1;i<n;i++)
+    {
+        currSum = Math.max(currSum,currSum+arr[i]);
+        maxSum = Math.max(currSum,maxSum);
+    }
+    return maxSum;
